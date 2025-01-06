@@ -208,6 +208,148 @@
 
 // export default User;
 
+// import React, { useEffect, useState } from "react";
+// import { Link } from "react-router-dom";
+// import axios from "axios";
+// import './index.css';
+
+// const User = () => {
+//   const [users, setUsers] = useState([]);
+
+//   useEffect(() => {
+//     axios
+//       .get("https://backend-sample-2.onrender.com")
+//       .then((res) => {
+//         console.log(res.data);
+//         setUsers(res.data.data); // Assuming the API returns data in res.data.data
+//       })
+//       .catch((err) => {
+//         console.log(err);
+//       });
+//   }, []);
+
+//   const deleteUser = (id) => {
+//     if (window.confirm("Are you sure you want to delete this user?")) {
+//       axios
+//         .delete(`https://backend-sample-2.onrender.com`)
+//         .then(() => {
+//           alert("User deleted successfully");
+//           setUsers(users.filter((user) => user._id !== id)); // Update the UI after deletion
+//         })
+//         .catch((error) => {
+//           console.log(error);
+//           alert("Failed to delete user");
+//         });
+//     }
+//   };
+
+//   return (
+//     <div>
+//       <Link to="/create">Create User</Link>
+//       <table border={1} style={{ width: "100%", borderCollapse: "collapse" }}>
+//         <thead>
+//           <tr>
+//             <th>Name</th>
+//             <th>Email</th>
+//             <th>Address</th>
+//             <th>Actions</th>
+//           </tr>
+//         </thead>
+//         <tbody>
+//           {users.map((user) => (
+//             <tr key={user._id}>
+//               <td>{user.name}</td>
+//               <td>{user.email}</td>
+//               <td>{user.address}</td>
+//               <td>
+//                 <Link to={`/update/${user._id}`} style={{ marginRight: "10px" }}>
+//                   Update
+//                 </Link>
+//                 <button onClick={() => deleteUser(user._id)}>Delete</button>
+//               </td>
+//             </tr>
+//           ))}
+//         </tbody>
+//       </table>
+//     </div>
+//   );
+// };
+
+// export default User;
+
+
+
+
+// import React, { useEffect, useState } from "react";
+// import { Link } from "react-router-dom";
+// import axios from "axios";
+// import './index.css';
+
+// const User = () => {
+//   const [users, setUsers] = useState([]);
+
+//   useEffect(() => {
+//     axios
+//       .get("https://backend-sample-2.onrender.com/api/user") // Corrected endpoint
+//       .then((res) => {
+//         console.log(res.data);
+//         setUsers(res.data.data); // Assuming the API returns data in res.data.data
+//       })
+//       .catch((err) => {
+//         console.log(err);
+//       });
+//   }, []);
+
+//   const deleteUser = (id) => {
+//     if (window.confirm("Are you sure you want to delete this user?")) {
+//       axios
+//         .delete(`https://backend-sample-2.onrender.com/api/user/${id}`) // Corrected endpoint
+//         .then(() => {
+//           alert("User deleted successfully");
+//           setUsers(users.filter((user) => user._id !== id)); // Update the UI after deletion
+//         })
+//         .catch((error) => {
+//           console.log(error);
+//           alert("Failed to delete user");
+//         });
+//     }
+//   };
+
+//   return (
+//     <div>
+//       <Link to="/create">Create User</Link>
+//       <table border={1} style={{ width: "100%", borderCollapse: "collapse" }}>
+//         <thead>
+//           <tr>
+//             <th>Name</th>
+//             <th>Email</th>
+//             <th>Address</th>
+//             <th>Actions</th>
+//           </tr>
+//         </thead>
+//         <tbody>
+//           {users.map((user) => (
+//             <tr key={user._id}>
+//               <td>{user.name}</td>
+//               <td>{user.email}</td>
+//               <td>{user.address}</td>
+//               <td>
+//                 <Link to={`/update/${user._id}`} style={{ marginRight: "10px" }}>
+//                   Update
+//                 </Link>
+//                 <button onClick={() => deleteUser(user._id)}>Delete</button>
+//               </td>
+//             </tr>
+//           ))}
+//         </tbody>
+//       </table>
+//     </div>
+//   );
+// };
+
+// export default User;
+
+
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
@@ -217,27 +359,33 @@ const User = () => {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
+    const url = "http://localhost:5000/api/user";
+    console.log("Making request to:", url); // Debugging line to log the URL
+
     axios
-      .get("https://backend-sample-2.onrender.com")
+      .get(url)
       .then((res) => {
-        console.log(res.data);
+        console.log("Response data:", res.data); // Debugging line to log the response data
         setUsers(res.data.data); // Assuming the API returns data in res.data.data
       })
       .catch((err) => {
-        console.log(err);
+        console.log("Error fetching users:", err); // Debugging line to log the error
       });
   }, []);
 
   const deleteUser = (id) => {
+    const deleteUrl = `http://localhost:5000/api/user/${id}`;
+    console.log("Deleting user with ID:", id); // Debugging line to log the ID being deleted
+
     if (window.confirm("Are you sure you want to delete this user?")) {
       axios
-        .delete(`https://backend-sample-2.onrender.com`)
+        .delete(deleteUrl)
         .then(() => {
           alert("User deleted successfully");
           setUsers(users.filter((user) => user._id !== id)); // Update the UI after deletion
         })
         .catch((error) => {
-          console.log(error);
+          console.log("Error deleting user:", error); // Debugging line to log the error during delete
           alert("Failed to delete user");
         });
     }
