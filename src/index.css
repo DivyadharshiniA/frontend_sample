@@ -1,49 +1,57 @@
-/* Lavender-themed styles */
 body {
     font-family: Arial, sans-serif;
     background-color: #f7f4fa;
+    background-image: url('img 6.jpg'); /* Add your background image path here */
+    background-size: cover; /* Ensures the image covers the entire page */
+    background-position: center;
+    background-attachment: fixed; /* Keeps the background fixed while scrolling */
     margin: 0;
     padding: 0;
-  }
-  
-  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+a {
     text-decoration: none;
     color: #6a0dad; /* Deep lavender */
-  }
-  
-  a:hover {
+}
+
+a:hover {
     text-decoration: underline;
-  }
-  
-  table {
-    width: 100%;
+}
+
+table {
+    width: 80%; /* Adjust the width of the table */
     border-collapse: collapse;
-    margin: 20px 0;
+    margin: 20px auto; /* Center the table */
     background-color: #fff;
     box-shadow: 0 2px 8px rgba(106, 13, 173, 0.2); /* Subtle lavender shadow */
-  }
-  
-  th,
-  td {
+}
+
+th,
+td {
     border: 1px solid #dcd6f7;
     text-align: left;
     padding: 10px 15px;
-  }
-  
-  th {
+}
+
+th {
     background-color: #e6e1f7; /* Light lavender for table headers */
     color: #6a0dad;
-  }
-  
-  tr:nth-child(even) {
+}
+
+tr:nth-child(even) {
     background-color: #f9f6ff; /* Subtle alternating row color */
-  }
-  
-  tr:hover {
+}
+
+tr:hover {
     background-color: #f2ebfe; /* Highlight row on hover */
-  }
-  
-  button {
+}
+
+button {
     background-color: #6a0dad;
     color: #fff;
     border: none;
@@ -51,22 +59,23 @@ body {
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-  }
-  
-  button:hover {
+    margin: 10px 0;
+}
+
+button:hover {
     background-color: #580d9e; /* Darker lavender on hover */
-  }
-  
-  button:disabled {
+}
+
+button:disabled {
     background-color: #dcd6f7;
     cursor: not-allowed;
-  }
-  
-  button:active {
+}
+
+button:active {
     background-color: #48007d; /* Even darker lavender for active state */
-  }
-  
-  .link-button {
+}
+
+.link-button {
     display: inline-block;
     padding: 8px 12px;
     background-color: #e6e1f7;
@@ -74,10 +83,112 @@ body {
     border: 1px solid #dcd6f7;
     border-radius: 4px;
     transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  
-  .link-button:hover {
+}
+
+.link-button:hover {
     background-color: #6a0dad;
     color: #fff;
+}
+
+
+/* index.css */
+
+/* General Body Styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Create User Page Container */
+.create-page-container {
+  width: 80%;
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  background-color: #e6e6fa; /* Lavender background */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Form Styling */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+label {
+  font-size: 16px;
+  margin-bottom: 5px;
+  text-align: left;
+  color: #6a0dad; /* Lavender text color */
+}
+
+input {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+input:focus {
+  border-color: #6a0dad; /* Focus color */
+}
+
+/* Button Styling */
+button {
+  padding: 12px 20px;
+  background-color: #6a0dad; /* Lavender color */
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #580d9e; /* Darker lavender on hover */
+}
+
+button:active {
+  background-color: #48007d; /* Even darker lavender for active state */
+}
+
+button:disabled {
+  background-color: #dcd6f7; /* Light disabled color */
+  cursor: not-allowed;
+}
+
+/* Link Styling */
+.link-button {
+  color: #6a0dad;
+  font-size: 14px;
+  text-decoration: none;
+  margin-top: 15px;
+}
+
+.link-button:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .create-page-container {
+    width: 90%;
   }
-  
+
+  form input,
+  form button {
+    font-size: 14px;
+  }
+}
