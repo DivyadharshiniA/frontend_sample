@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f7f4fa;
-    background-image: url('%PUBLIC_URL%/img 6.jpg');/* Add your background image path here */
+    background-image: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fstock.adobe.com%2Fsearch%2Fimages%3Fk%3Dlavender%2Bcolor%2Bbackground&psig=AOvVaw0J5XgGelDIl3uHjBbnsNFf&ust=1736261498299000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCMD0z6Gs4YoDFQAAAAAdAAAAABAE');/* Add your background image path here */
     background-size: cover; /* Ensures the image covers the entire page */
     background-position: center;
     background-attachment: fixed; /* Keeps the background fixed while scrolling */
