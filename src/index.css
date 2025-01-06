@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f7f4fa;
-    background-image: url('img 6.jpg'); /* Add your background image path here */
+    background-image: url('%PUBLIC_URL%/img 6.jpg');/* Add your background image path here */
     background-size: cover; /* Ensures the image covers the entire page */
     background-position: center;
     background-attachment: fixed; /* Keeps the background fixed while scrolling */
