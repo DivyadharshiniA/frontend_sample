@@ -1,0 +1,83 @@
+/* Lavender-themed styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f4fa;
+    margin: 0;
+    padding: 0;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #6a0dad; /* Deep lavender */
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(106, 13, 173, 0.2); /* Subtle lavender shadow */
+  }
+  
+  th,
+  td {
+    border: 1px solid #dcd6f7;
+    text-align: left;
+    padding: 10px 15px;
+  }
+  
+  th {
+    background-color: #e6e1f7; /* Light lavender for table headers */
+    color: #6a0dad;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f9f6ff; /* Subtle alternating row color */
+  }
+  
+  tr:hover {
+    background-color: #f2ebfe; /* Highlight row on hover */
+  }
+  
+  button {
+    background-color: #6a0dad;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #580d9e; /* Darker lavender on hover */
+  }
+  
+  button:disabled {
+    background-color: #dcd6f7;
+    cursor: not-allowed;
+  }
+  
+  button:active {
+    background-color: #48007d; /* Even darker lavender for active state */
+  }
+  
+  .link-button {
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: #e6e1f7;
+    color: #6a0dad;
+    border: 1px solid #dcd6f7;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .link-button:hover {
+    background-color: #6a0dad;
+    color: #fff;
+  }
+  
